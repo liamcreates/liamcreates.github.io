@@ -1,5 +1,4 @@
 <script type="text/javascript">
-     
 function yourGuess() {
     guess = document.getElementById("guess").value;
     guesses = document.getElementById("output");
@@ -21,4 +20,7 @@ function showNumberToGuess() {
         document.getElementById('numberToGuess').value = '';
         document.getElementById('cheatShow').style.display = 'none';
     }
+}
+
+var numToGuess = Math.floor(Math.random()*500);
 </script>
