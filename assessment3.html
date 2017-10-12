@@ -1,26 +1,25 @@
-<script type="text/javascript">
-function yourGuess() {
-    guess = document.getElementById("guess").value;
-    guesses = document.getElementById("output");
+<!DOCTYPE html>
+<html>
+<body>
 
-    if (guess == numToGuess) {
-        guesses.value = guesses.value + "\r" + "You have guessed correctly! ("+guess+")";
-    } else if (guess > numToGuess) {
-        guesses.value = guesses.value + "\r" + "You guessing too high!("+guess+")";
-    } else {
-        guesses.value = guesses.value + "\r" + "You guessing too low!("+guess+")";
-    }
-}
-    
-function showNumberToGuess() {
-    if (document.getElementById('cheat').checked) {
-        document.getElementById('numberToGuess').value = numToGuess;
-        document.getElementById('cheatShow').style.display = 'inline';
-    } else {
-        document.getElementById('numberToGuess').value = '';
-        document.getElementById('cheatShow').style.display = 'none';
-    }
-}
+<h2>Password guesser</h2>
 
-var numToGuess = Math.floor(Math.random()*500);
+<button onclick="myFunction()">Log in</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var txt;
+    var person = prompt("Please enter your password:", "Enter password here!");
+    if (person == null || person == "") {
+        txt = "Please log in.";
+    } else {
+        txt = "Welcome " + person + "! You are now logged in.";
+    }
+    document.getElementById("demo").innerHTML = txt;
+}
 </script>
+
+</body>
+</html>
