@@ -12,11 +12,14 @@
 function myFunction() {
     var txt;
     var person = prompt("Please enter your password:", "Enter password here!");
-    if (person == null || person == "") {
-        txt = "Please log in.";
-    } else {
-        txt = "Welcome " + person + "! You are now logged in.";
+    while (person != "ilovekarl") {
+         alert("Try again!")
+         person = prompt("Please enter your password:", "Enter password here!");
+         
     }
+    
+        txt = "Welcome " + person + "! You are now logged in.";
+    
     document.getElementById("demo").innerHTML = txt;
 }
 </script>
